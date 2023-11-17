@@ -1,12 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-set(name bare_distributable)
-
-project(
-  ${name}
-  VERSION 1.0
-  LANGUAGES C CXX
-)
+project(bare_compat C)
 
 include(bare)
 
@@ -14,13 +8,12 @@ bare_target(target)
 
 add_subdirectory(vendor/bare EXCLUDE_FROM_ALL)
 
-add_library(${name}_obj OBJECT)
+add_library(bare_compat_obj OBJECT)
 
 set_target_properties(
-  ${name}_obj
+  bare_compat_obj
   PROPERTIES
-  C_STANDARD 99
-  CXX_STANDARD 20
+  C_STANDARD 11
   POSITION_INDEPENDENT_CODE ON
 )
 
@@ -32,40 +25,65 @@ add_bare_bundle(
 )
 
 target_sources(
-  ${name}_obj
+  bare_compat_obj
   PRIVATE
     src/main.bundle.h
     src/main.c
 )
 
 target_include_directories(
-  ${name}_obj
+  bare_compat_obj
   PUBLIC
     $<TARGET_PROPERTY:bare,INTERFACE_INCLUDE_DIRECTORIES>
 )
 
-add_executable(${name}_bin $<TARGET_OBJECTS:${name}_obj>)
+add_executable(bare_compat_bin $<TARGET_OBJECTS:bare_compat_obj>)
 
 set_target_properties(
-  ${name}_bin
+  bare_compat_bin
   PROPERTIES
   ENABLE_EXPORTS ON
-  OUTPUT_NAME ${name}
+  OUTPUT_NAME node
 )
 
 target_link_libraries(
-  ${name}_bin
+  bare_compat_bin
   PRIVATE
     $<LINK_LIBRARY:WHOLE_ARCHIVE,bare_static>
 )
 
 link_bare_module(
-  ${name}_bin
+  bare_compat_bin
+  bare_buffer
+  node_modules/bare-buffer
+)
+
+link_bare_module(
+  bare_compat_bin
+  bare_env
+  node_modules/bare-env
+)
+
+link_bare_module(
+  bare_compat_bin
   bare_fs
   node_modules/bare-fs
 )
 
-install(
-  TARGETS ${name}_bin
-  RUNTIME DESTINATION ${target}
+link_bare_module(
+  bare_compat_bin
+  bare_hrtime
+  node_modules/bare-hrtime
+)
+
+link_bare_module(
+  bare_compat_bin
+  bare_module
+  node_modules/bare-module
+)
+
+link_bare_module(
+  bare_compat_bin
+  bare_os
+  node_modules/bare-os
 )

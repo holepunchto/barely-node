@@ -1,29 +1,46 @@
 {
   "private": true,
-  "name": "bare-distributable",
+  "name": "bare-compat",
   "workspaces": [
     "vendor/*"
   ],
   "imports": {
+    "assert": "bare-assert",
+    "console": "bare-console",
     "events": "bare-events",
-    "fs": "bare-fs"
+    "fs": "bare-fs",
+    "module": "bare-module",
+    "os": "bare-os",
+    "path": "bare-path",
+    "process": "bare-process",
+    "url": "bare-url"
   },
   "scripts": {
     "test": "standard"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holepunchto/bare-distributable.git"
+    "url": "git+https://github.com/holepunchto/bare-compat.git"
   },
   "author": "Holepunch",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/holepunchto/bare-distributable/issues"
+    "url": "https://github.com/holepunchto/bare-compat/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-distributable#readme",
+  "homepage": "https://github.com/holepunchto/bare-compat#readme",
   "dependencies": {
+    "bare-assert": "^1.0.1",
+    "bare-buffer": "^2.0.0",
+    "bare-console": "^4.0.1",
+    "bare-env": "^2.0.0",
     "bare-events": "^2.0.0",
-    "bare-fs": "^2.0.0"
+    "bare-fs": "^2.0.0",
+    "bare-hrtime": "^2.0.0",
+    "bare-module": "^2.4.0",
+    "bare-os": "^2.0.0",
+    "bare-path": "^2.0.0",
+    "bare-process": "^1.2.0",
+    "bare-url": "^0.3.0"
   },
   "devDependencies": {
     "standard": "^17.0.0"
