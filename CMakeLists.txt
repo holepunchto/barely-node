@@ -87,3 +87,21 @@ link_bare_module(
   bare_os
   node_modules/bare-os
 )
+
+link_bare_module(
+  bare_compat_bin
+  bare_pipe
+  node_modules/bare-pipe
+)
+
+link_bare_module(
+  bare_compat_bin
+  bare_repl
+  node_modules/bare-repl
+)
+
+link_bare_module(
+  bare_compat_bin
+  bare_tty
+  node_modules/bare-tty
+)
