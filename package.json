@@ -4,19 +4,6 @@
   "workspaces": [
     "vendor/*"
   ],
-  "imports": {
-    "assert": "bare-assert",
-    "console": "bare-console",
-    "events": "bare-events",
-    "fs": "bare-fs",
-    "module": "bare-module",
-    "os": "bare-os",
-    "path": "bare-path",
-    "process": "bare-process",
-    "repl": "bare-repl",
-    "tty": "bare-tty",
-    "url": "bare-url"
-  },
   "scripts": {
     "test": "standard"
   },

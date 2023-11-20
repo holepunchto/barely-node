@@ -20,7 +20,7 @@ set_target_properties(
 add_bare_bundle(
   ENTRY src/main.js
   OUT src/main.bundle.h
-  IMPORT_MAP package.json
+  IMPORT_MAP import-map.json
   TARGET c
 )
 
