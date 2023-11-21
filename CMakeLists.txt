@@ -102,6 +102,12 @@ link_bare_module(
 
 link_bare_module(
   bare_compat_bin
+  bare_timers
+  node_modules/bare-timers
+)
+
+link_bare_module(
+  bare_compat_bin
   bare_tty
   node_modules/bare-tty
 )

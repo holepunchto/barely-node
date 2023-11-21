@@ -9,6 +9,7 @@
     "path": "bare-path",
     "process": "bare-process",
     "repl": "bare-repl",
+    "timers": "bare-timers",
     "tty": "bare-tty",
     "url": "bare-url"
   }
