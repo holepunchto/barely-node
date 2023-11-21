@@ -7,29 +7,36 @@ const repl = require('bare-repl')
 
 global.process = process
 
-const builtins = {
-  module: Module,
-  path,
-  os,
-  process,
-  repl,
+const moduleOptions = {
+  builtins: {
+    module: Module,
+    path,
+    os,
+    process,
+    repl,
 
-  assert: require('bare-assert'),
-  console: require('bare-console'),
-  events: require('bare-events'),
-  fs: require('bare-fs'),
-  tty: require('bare-tty'),
-  url: require('bare-url')
+    assert: require('bare-assert'),
+    console: require('bare-console'),
+    events: require('bare-events'),
+    fs: require('bare-fs'),
+    tty: require('bare-tty'),
+    url: require('bare-url')
+  },
+  conditions: [
+    'import',
+    'require',
+    'node'
+  ]
 }
 
 if (Bare.argv.length === 1) {
-  repl.start()
+  repl.start({ require: moduleOptions })
 } else {
   Module.load(
     Bare.argv[1] = Module.resolve(
       path.resolve(os.cwd(), Bare.argv[1]),
-      { builtins }
+      moduleOptions
     ),
-    { builtins }
+    moduleOptions
   )
 }
