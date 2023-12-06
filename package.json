@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "bare-compat",
+  "name": "barely-node",
   "workspaces": [
     "vendor/*"
   ],
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holepunchto/bare-compat.git"
+    "url": "git+https://github.com/holepunchto/barely-node.git"
   },
   "author": "Holepunch",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/holepunchto/bare-compat/issues"
+    "url": "https://github.com/holepunchto/barely-node/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-compat#readme",
+  "homepage": "https://github.com/holepunchto/barely-node#readme",
   "dependencies": {
     "bare-assert": "^1.0.1",
     "bare-buffer": "^2.0.0",
