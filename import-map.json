@@ -4,6 +4,7 @@
     "console": "bare-console",
     "events": "bare-events",
     "fs": "bare-fs",
+    "inspector": "bare-inspector",
     "module": "bare-module",
     "os": "bare-os",
     "path": "bare-path",

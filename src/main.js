@@ -19,6 +19,7 @@ const moduleOptions = {
     console: require('bare-console'),
     events: require('bare-events'),
     fs: require('bare-fs'),
+    inspector: require('bare-inspector'),
     timers: require('bare-timers'),
     tty: require('bare-tty'),
     url: require('bare-url')

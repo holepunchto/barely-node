@@ -72,6 +72,12 @@ link_bare_module(
 
 link_bare_module(
   barely_bin
+  bare_inspector
+  node_modules/bare-inspector
+)
+
+link_bare_module(
+  barely_bin
   bare_module
   node_modules/bare-module
 )
