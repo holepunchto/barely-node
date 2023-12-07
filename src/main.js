@@ -17,8 +17,10 @@ const moduleOptions = {
 
     assert: require('bare-assert'),
     console: require('bare-console'),
+    child_process: require('bare-subprocess'),
     events: require('bare-events'),
     fs: require('bare-fs'),
+    'fs/promises': require('bare-fs/promises'),
     inspector: require('bare-inspector'),
     timers: require('bare-timers'),
     tty: require('bare-tty'),

@@ -102,6 +102,12 @@ link_bare_module(
 
 link_bare_module(
   barely_bin
+  bare_subprocess
+  node_modules/bare-subprocess
+)
+
+link_bare_module(
+  barely_bin
   bare_timers
   node_modules/bare-timers
 )
