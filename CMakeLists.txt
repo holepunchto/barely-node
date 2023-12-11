@@ -52,68 +52,24 @@ target_link_libraries(
     $<LINK_LIBRARY:WHOLE_ARCHIVE,bare_static>
 )
 
-link_bare_module(
-  barely_bin
-  bare_buffer
-  node_modules/bare-buffer
-)
+link_bare_module(barely_bin bare_buffer bare-buffer)
 
-link_bare_module(
-  barely_bin
-  bare_fs
-  node_modules/bare-fs
-)
+link_bare_module(barely_bin bare_fs bare-fs)
 
-link_bare_module(
-  barely_bin
-  bare_hrtime
-  node_modules/bare-hrtime
-)
+link_bare_module(barely_bin bare_hrtime bare-hrtime)
 
-link_bare_module(
-  barely_bin
-  bare_inspector
-  node_modules/bare-inspector
-)
+link_bare_module(barely_bin bare_inspector bare-inspector)
 
-link_bare_module(
-  barely_bin
-  bare_module
-  node_modules/bare-module
-)
+link_bare_module(barely_bin bare_module bare-module)
 
-link_bare_module(
-  barely_bin
-  bare_os
-  node_modules/bare-os
-)
+link_bare_module(barely_bin bare_os bare-os)
 
-link_bare_module(
-  barely_bin
-  bare_pipe
-  node_modules/bare-pipe
-)
+link_bare_module(barely_bin bare_pipe bare-pipe)
 
-link_bare_module(
-  barely_bin
-  bare_repl
-  node_modules/bare-repl
-)
+link_bare_module(barely_bin bare_repl bare-repl)
 
-link_bare_module(
-  barely_bin
-  bare_subprocess
-  node_modules/bare-subprocess
-)
+link_bare_module(barely_bin bare_subprocess bare-subprocess)
 
-link_bare_module(
-  barely_bin
-  bare_timers
-  node_modules/bare-timers
-)
+link_bare_module(barely_bin bare_timers bare-timers)
 
-link_bare_module(
-  barely_bin
-  bare_tty
-  node_modules/bare-tty
-)
+link_bare_module(barely_bin bare_tty bare-tty)
